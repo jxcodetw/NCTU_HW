@@ -1,0 +1,6 @@
+.vscode
+*.o
+main
+main_exp
+ai.out.js
+weights.txt

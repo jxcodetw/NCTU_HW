@@ -1,0 +1,5 @@
+%41$p main's return addr
+%p buf's addr
+
+0x7fffffffe250
+0x7fffffffe368

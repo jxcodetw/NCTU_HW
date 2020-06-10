@@ -1,0 +1,230 @@
+\documentclass[A4]{article}
+
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage[toc,page]{appendix}
+\usepackage{url}
+\usepackage{booktabs}
+
+\title{Evolutionary Computation Homework \#2 Report}
+
+\author{Chien-Hsun, Lai}
+
+\date{\today}
+% ---- 1. Section title -> Section 1: Section title
+\makeatletter
+% we use \prefix@<level> only if it is defined
+\renewcommand{\@seccntformat}[1]{%
+  \ifcsname prefix@#1\endcsname
+    \csname prefix@#1\endcsname
+  \else
+    \csname the#1\endcsname\quad
+  \fi}
+% define \prefix@section
+\newcommand\prefix@section{Problem \thesection:}
+\makeatother
+% -----
+\begin{document}
+\maketitle
+
+\section{}
+\label{sec:p1}
+
+GA uses fitness as the probability of selecting the parent.
+Not only the elites are selected.
+It maintains a diversity of solution candidates.
+ES threats fitness as rank.
+Only top-k individuals are selected.
+They tends to walk to the best possible solution space.
+If the mutation rate (step size) is too small,
+it will lose the chance to explorer other area of the solution space.
+But if the fitness surface is smooth, ES will run as fast as it can towards a optimal.
+
+\section{}
+\label{sec:p2}
+
+They probably won't change.
+
+\section{}
+\label{sec:p3}
+
+\begin{table}[H]
+\begin{minipage}{.5\linewidth}
+	\centering
+	\begin{tabular}{@{}llll@{}}
+	\toprule
+	(1+1)-ES & 0.01 & 0.1    & 1  \\ \midrule
+	Run \#1  & 759  & 717781 & -1 \\
+	Run \#2  & 796  & 678544 & -1 \\
+	Run \#3  & 822  & 122065 & -1 \\
+	Run \#4  & 913  & 233446 & -1 \\
+	Run \#5  & 819  & 363942 & -1 \\
+	Run \#6  & 817  & 21134  & -1 \\
+	Run \#7  & 882  & 108376 & -1 \\
+	Run \#8  & 884  & 36912  & -1 \\
+	Run \#9  & 827  & 9580   & -1 \\
+	Run \#10 & 811  & 172545 & -1 \\ \bottomrule
+	\end{tabular}
+\end{minipage}%
+\begin{minipage}{.5\linewidth}
+	\begin{tabular}{@{}llll@{}}
+	\toprule
+	(1,1)-ES & 0.01 & 0.1 & 1  \\ \midrule
+	Run \#1  & -1   & -1  & -1 \\
+	Run \#2  & -1   & -1  & -1 \\
+	Run \#3  & -1   & -1  & -1 \\
+	Run \#4  & -1   & -1  & -1 \\
+	Run \#5  & -1   & -1  & -1 \\
+	Run \#6  & -1   & -1  & -1 \\
+	Run \#7  & -1   & -1  & -1 \\
+	Run \#8  & -1   & -1  & -1 \\
+	Run \#9  & -1   & -1  & -1 \\
+	Run \#10 & -1   & -1  & -1 \\ \bottomrule
+	\end{tabular}
+\end{minipage}
+\caption{Fixed step-size for Gaussian mutation}
+\end{table}
+
+\section{}
+\label{sec:p4}
+
+(1,1)-ES generate 1 child and then use it as the next parent.
+It is equivalent to random search. Wherever it mutate, it goes there.
+So it is really hard to get to the answer we want (need a lot of luck).
+\\
+\\
+(1+1)-ES select among child and parent.
+It only take a move when there are better solution.
+If there aren't any better solutions, it'll stay where it is.
+But if the mutation step is too big, it'll be hard to randomly get a better child.
+
+\section{}
+\label{sec:p5}
+
+Parameters:
+
+$ \tau = exp(-0.00007 * n) $
+
+$ \tau\ensuremath{'} = \frac{1}{\sqrt{2\sqrt{n}}} $
+
+$ \epsilon_0 = 0.001 $
+
+\begin{table}[H]
+	\begin{minipage}{.5\linewidth}
+		\centering
+		\begin{tabular}{@{}llll@{}}
+		\toprule
+		(1+1)-ES & 0.01 & 0.1  & 1    \\ \midrule
+		Run \#1  & 2397 & 3220 & -1   \\
+		Run \#2  & 1251 & 859  & 1001 \\
+		Run \#3  & 2319 & 2207 & 5197 \\
+		Run \#4  & 1000 & 2433 & 1922 \\
+		Run \#5  & 5647 & 1999 & 1374 \\
+		Run \#6  & 2029 & 2950 & 1377 \\
+		Run \#7  & 609  & 939  & -1   \\
+		Run \#8  & 1735 & 721  & 1006 \\
+		Run \#9  & 1742 & 1080 & -1   \\
+		Run \#10 & 3262 & 1389 & 7910 \\ \bottomrule
+		\end{tabular}
+	\end{minipage}%
+	\begin{minipage}{.5\linewidth}
+		\begin{tabular}{@{}llll@{}}
+		\toprule
+		(1,1)-ES & 0.01 & 0.1 & 1  \\ \midrule
+		Run \#1  & -1   & -1  & -1 \\
+		Run \#2  & -1   & -1  & -1 \\
+		Run \#3  & -1   & -1  & -1 \\
+		Run \#4  & -1   & -1  & -1 \\
+		Run \#5  & -1   & -1  & -1 \\
+		Run \#6  & -1   & -1  & -1 \\
+		Run \#7  & -1   & -1  & -1 \\
+		Run \#8  & -1   & -1  & -1 \\
+		Run \#9  & -1   & -1  & -1 \\
+		Run \#10 & -1   & -1  & -1 \\ \bottomrule
+		\end{tabular}
+	\end{minipage}
+	\caption{Uncorrelated Gaussian mutation}
+\end{table}
+
+
+\section{}
+\label{sec:p6}
+
+Self-adaptation improves the result of (1+1)-ES.
+It might due to the decay learning rate. Smaller step search for finer solution.
+Sometimes for initial step size = 1, it won't converge.
+It might due to the inherited step size.
+Although the child get a better score to replace the parent,
+the step size might mutate to a large one.
+So it is takes a lot of time for learning rate to decay to get another better child.
+\\
+\\
+(1,1)-ES still acts as if it was completely random.
+
+\section{}
+\label{sec:p7}
+
+Parameters:
+
+$ G = 30 $
+
+$ a = 0.85 $
+
+\begin{table}[H]
+	\begin{minipage}{.5\linewidth}
+		\centering
+		\begin{tabular}{@{}llll@{}}
+		\toprule
+		(1+1)-ES & 0.01 & 0.1 & 1   \\ \midrule
+		Run \#1  & 506  & 376 & 696 \\
+		Run \#2  & 493  & 433 & 617 \\
+		Run \#3  & 521  & 358 & 708 \\
+		Run \#4  & 539  & 390 & 663 \\
+		Run \#5  & 540  & 489 & 695 \\
+		Run \#6  & 619  & 334 & 636 \\
+		Run \#7  & 454  & 464 & 692 \\
+		Run \#8  & 427  & 437 & 690 \\
+		Run \#9  & 540  & 351 & 679 \\
+		Run \#10 & 464  & 375 & 699 \\ \bottomrule
+		\end{tabular}
+	\end{minipage}%
+	\begin{minipage}{.5\linewidth}
+		\begin{tabular}{@{}llll@{}}
+		\toprule
+		(1,1)-ES & 0.01 & 0.1 & 1  \\ \midrule
+		Run \#1  & -1   & -1  & -1 \\
+		Run \#2  & -1   & -1  & -1 \\
+		Run \#3  & -1   & -1  & -1 \\
+		Run \#4  & -1   & -1  & -1 \\
+		Run \#5  & -1   & -1  & -1 \\
+		Run \#6  & -1   & -1  & -1 \\
+		Run \#7  & -1   & -1  & -1 \\
+		Run \#8  & -1   & -1  & -1 \\
+		Run \#9  & -1   & -1  & -1 \\
+		Run \#10 & -1   & -1  & -1 \\ \bottomrule
+		\end{tabular}
+	\end{minipage}
+	\caption{1/5-rule}
+\end{table}
+
+
+
+\section{}
+\label{sec:p8}
+
+1/5-rule with (1+1)-ES out-perform the previous methods.
+Clearly, being able to dynamically change the step size helps a lot.
+Moreover, 1/5-rule didn't just decay it's step-size.
+It'll increase it's step-size to expand the search space or shrink the search space
+depending on how current mutation performs.
+
+\begin{appendices}
+\chapter{Source code for experiments}\\
+\url{https://github.com/jxcodetw/NCTU_GA/tree/master/hw2}
+\end{appendices}
+
+\end{document}

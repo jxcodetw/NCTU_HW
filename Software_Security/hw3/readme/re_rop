@@ -1,0 +1,84 @@
+Gadgets information
+============================================================
+0x00000000000f7288 : adc byte ptr [rax + 1], bh ; syscall ; cmp rax, -0xfff ; jae 0xf72d9 ; ret
+0x00000000000f7228 : adc byte ptr [rax], bh ; syscall ; cmp rax, -0xfff ; jae 0xf7279 ; ret
+0x00000000000f72df : add byte ptr [rax + 0x15], bh ; syscall ; cmp rax, -0xfff ; jae 0xf7300 ; ret
+0x00000000000f722a : add byte ptr [rax], al ; add byte ptr [rax], al ; syscall ; cmp rax, -0xfff ; jae 0xf7277 ; ret
+0x00000000000f727e : add byte ptr [rax], al ; cmp dword ptr [rip + 0x2d24b9], 0 ; jne 0xf72b3 ; mov eax, 1 ; syscall ; cmp rax, -0xfff ; jae 0xf72e3 ; ret
+0x00000000000f7225 : add byte ptr [rax], al ; jne 0xf724c ; mov eax, 0 ; syscall ; cmp rax, -0xfff ; jae 0xf727c ; ret
+0x00000000000f7285 : add byte ptr [rax], al ; jne 0xf72ac ; mov eax, 1 ; syscall ; cmp rax, -0xfff ; jae 0xf72dc ; ret
+0x00000000000f72de : add byte ptr [rax], al ; mov eax, 0x15 ; syscall ; cmp rax, -0xfff ; jae 0xf7301 ; ret
+0x00000000000f722c : add byte ptr [rax], al ; syscall ; cmp rax, -0xfff ; jae 0xf7275 ; ret
+0x00000000000f728c : add byte ptr [rax], al ; syscall ; cmp rax, -0xfff ; jae 0xf72d5 ; ret
+0x00000000000f72e3 : add byte ptr [rax], al ; syscall ; cmp rax, -0xfff ; jae 0xf72fc ; ret
+0x00000000000f727d : add byte ptr [rax], r8b ; cmp dword ptr [rip + 0x2d24b9], 0 ; jne 0xf72b4 ; mov eax, 1 ; syscall ; cmp rax, -0xfff ; jae 0xf72e4 ; ret
+0x00000000000f72dd : add byte ptr [rax], r8b ; mov eax, 0x15 ; syscall ; cmp rax, -0xfff ; jae 0xf7302 ; ret
+0x00000000000f7226 : add byte ptr [rbp + 0x10], dh ; mov eax, 0 ; syscall ; cmp rax, -0xfff ; jae 0xf727b ; ret
+0x00000000000f7286 : add byte ptr [rbp + 0x10], dh ; mov eax, 1 ; syscall ; cmp rax, -0xfff ; jae 0xf72db ; ret
+0x00000000000f727f : add byte ptr [rbx + 0x2d24b93d], al ; add byte ptr [rax], al ; jne 0xf72b2 ; mov eax, 1 ; syscall ; cmp rax, -0xfff ; jae 0xf72e2 ; ret
+0x00000000000f7274 : add dword ptr [rax - 0x7d], ecx ; enter -0x3c01, 0x66 ; nop dword ptr [rax + rax] ; cmp dword ptr [rip + 0x2d24b9], 0 ; jne 0xf72bd ; mov eax, 1 ; syscall ; cmp rax, -0xfff ; jae 0xf72ed ; ret
+0x00000000000f72d4 : add dword ptr [rax - 0x7d], ecx ; enter -0x3c01, 0x66 ; nop dword ptr [rax + rax] ; mov eax, 0x15 ; syscall ; cmp rax, -0xfff ; jae 0xf730b ; ret
+0x00000000000f728a : add dword ptr [rax], eax ; add byte ptr [rax], al ; syscall ; cmp rax, -0xfff ; jae 0xf72d7 ; ret
+0x00000000000f7257 : add dword ptr [rax], eax ; mov rax, rdx ; add rsp, 8 ; cmp rax, -0xfff ; jae 0xf727a ; ret
+0x00000000000f72b7 : add dword ptr [rax], eax ; mov rax, rdx ; add rsp, 8 ; cmp rax, -0xfff ; jae 0xf72da ; ret
+0x00000000000f72ee : add ebx, eax ; mov rcx, qword ptr [rip + 0x2ccb81] ; neg eax ; mov dword ptr fs:[rcx], eax ; or rax, 0xffffffffffffffff ; ret
+0x00000000000f72c7 : add ebx, eax ; mov rcx, qword ptr [rip + 0x2ccba8] ; neg eax ; mov dword ptr fs:[rcx], eax ; or rax, 0xffffffffffffffff ; ret
+0x00000000000f7267 : add ebx, eax ; mov rcx, qword ptr [rip + 0x2ccc08] ; neg eax ; mov dword ptr fs:[rcx], eax ; or rax, 0xffffffffffffffff ; ret
+0x00000000000f725d : add esp, 8 ; cmp rax, -0xfff ; jae 0xf7274 ; ret
+0x00000000000f72bd : add esp, 8 ; cmp rax, -0xfff ; jae 0xf72d4 ; ret
+0x00000000000f725c : add rsp, 8 ; cmp rax, -0xfff ; jae 0xf7275 ; ret
+0x00000000000f72bc : add rsp, 8 ; cmp rax, -0xfff ; jae 0xf72d5 ; ret
+0x00000000000f7283 : and al, 0x2d ; add byte ptr [rax], al ; jne 0xf72ae ; mov eax, 1 ; syscall ; cmp rax, -0xfff ; jae 0xf72de ; ret
+0x00000000000f7223 : and eax, 0x7500002d ; adc byte ptr [rax], bh ; syscall ; cmp rax, -0xfff ; jae 0xf727e ; ret
+0x00000000000f7280 : cmp dword ptr [rip + 0x2d24b9], 0 ; jne 0xf72b1 ; mov eax, 1 ; syscall ; cmp rax, -0xfff ; jae 0xf72e1 ; ret
+0x00000000000f7220 : cmp dword ptr [rip + 0x2d2519], 0 ; jne 0xf7251 ; mov eax, 0 ; syscall ; cmp rax, -0xfff ; jae 0xf7281 ; ret
+0x00000000000f7281 : cmp eax, 0x2d24b9 ; add byte ptr [rbp + 0x10], dh ; mov eax, 1 ; syscall ; cmp rax, -0xfff ; jae 0xf72e0 ; ret
+0x00000000000f7221 : cmp eax, 0x2d2519 ; add byte ptr [rbp + 0x10], dh ; mov eax, 0 ; syscall ; cmp rax, -0xfff ; jae 0xf7280 ; ret
+0x00000000000f7231 : cmp eax, 0xfffff001 ; jae 0xf7270 ; ret
+0x00000000000f7291 : cmp eax, 0xfffff001 ; jae 0xf72d0 ; ret
+0x00000000000f72e8 : cmp eax, 0xfffff001 ; jae 0xf72f7 ; ret
+0x00000000000f7230 : cmp rax, -0xfff ; jae 0xf7271 ; ret
+0x00000000000f7290 : cmp rax, -0xfff ; jae 0xf72d1 ; ret
+0x00000000000f72e7 : cmp rax, -0xfff ; jae 0xf72f8 ; ret
+0x00000000000f7277 : enter -0x3c01, 0x66 ; nop dword ptr [rax + rax] ; cmp dword ptr [rip + 0x2d24b9], 0 ; jne 0xf72ba ; mov eax, 1 ; syscall ; cmp rax, -0xfff ; jae 0xf72ea ; ret
+0x00000000000f72d7 : enter -0x3c01, 0x66 ; nop dword ptr [rax + rax] ; mov eax, 0x15 ; syscall ; cmp rax, -0xfff ; jae 0xf7308 ; ret
+0x00000000000f7278 : inc ebx ; nop word ptr [rax + rax] ; cmp dword ptr [rip + 0x2d24b9], 0 ; jne 0xf72b9 ; mov eax, 1 ; syscall ; cmp rax, -0xfff ; jae 0xf72e9 ; ret
+0x00000000000f72d8 : inc ebx ; nop word ptr [rax + rax] ; mov eax, 0x15 ; syscall ; cmp rax, -0xfff ; jae 0xf7307 ; ret
+0x00000000000f7236 : jae 0xf726b ; ret
+0x00000000000f7296 : jae 0xf72cb ; ret
+0x00000000000f72ed : jae 0xf72f2 ; ret
+0x00000000000f7227 : jne 0xf724a ; mov eax, 0 ; syscall ; cmp rax, -0xfff ; jae 0xf727a ; ret
+0x00000000000f7287 : jne 0xf72aa ; mov eax, 1 ; syscall ; cmp rax, -0xfff ; jae 0xf72da ; ret
+0x00000000000f7229 : mov eax, 0 ; syscall ; cmp rax, -0xfff ; jae 0xf7278 ; ret
+0x00000000000f72e0 : mov eax, 0x15 ; syscall ; cmp rax, -0xfff ; jae 0xf72ff ; ret
+0x00000000000f7289 : mov eax, 1 ; syscall ; cmp rax, -0xfff ; jae 0xf72d8 ; ret
+0x00000000000f725a : mov eax, edx ; add rsp, 8 ; cmp rax, -0xfff ; jae 0xf7277 ; ret
+0x00000000000f72ba : mov eax, edx ; add rsp, 8 ; cmp rax, -0xfff ; jae 0xf72d7 ; ret
+0x00000000000f7282 : mov ecx, 0x2d24 ; jne 0xf72af ; mov eax, 1 ; syscall ; cmp rax, -0xfff ; jae 0xf72df ; ret
+0x00000000000f72f1 : mov ecx, dword ptr [rip + 0x2ccb81] ; neg eax ; mov dword ptr fs:[rcx], eax ; or rax, 0xffffffffffffffff ; ret
+0x00000000000f72ca : mov ecx, dword ptr [rip + 0x2ccba8] ; neg eax ; mov dword ptr fs:[rcx], eax ; or rax, 0xffffffffffffffff ; ret
+0x00000000000f726a : mov ecx, dword ptr [rip + 0x2ccc08] ; neg eax ; mov dword ptr fs:[rcx], eax ; or rax, 0xffffffffffffffff ; ret
+0x00000000000f7259 : mov rax, rdx ; add rsp, 8 ; cmp rax, -0xfff ; jae 0xf7278 ; ret
+0x00000000000f72b9 : mov rax, rdx ; add rsp, 8 ; cmp rax, -0xfff ; jae 0xf72d8 ; ret
+0x00000000000f72f0 : mov rcx, qword ptr [rip + 0x2ccb81] ; neg eax ; mov dword ptr fs:[rcx], eax ; or rax, 0xffffffffffffffff ; ret
+0x00000000000f72c9 : mov rcx, qword ptr [rip + 0x2ccba8] ; neg eax ; mov dword ptr fs:[rcx], eax ; or rax, 0xffffffffffffffff ; ret
+0x00000000000f7269 : mov rcx, qword ptr [rip + 0x2ccc08] ; neg eax ; mov dword ptr fs:[rcx], eax ; or rax, 0xffffffffffffffff ; ret
+0x00000000000f727b : nop dword ptr [rax + rax] ; cmp dword ptr [rip + 0x2d24b9], 0 ; jne 0xf72b6 ; mov eax, 1 ; syscall ; cmp rax, -0xfff ; jae 0xf72e6 ; ret
+0x00000000000f72db : nop dword ptr [rax + rax] ; mov eax, 0x15 ; syscall ; cmp rax, -0xfff ; jae 0xf7304 ; ret
+0x00000000000f727a : nop word ptr [rax + rax] ; cmp dword ptr [rip + 0x2d24b9], 0 ; jne 0xf72b7 ; mov eax, 1 ; syscall ; cmp rax, -0xfff ; jae 0xf72e7 ; ret
+0x00000000000f72da : nop word ptr [rax + rax] ; mov eax, 0x15 ; syscall ; cmp rax, -0xfff ; jae 0xf7305 ; ret
+0x00000000000f726c : or ah, cl ; sub al, 0 ; neg eax ; mov dword ptr fs:[rcx], eax ; or rax, 0xffffffffffffffff ; ret
+0x00000000000f72f2 : or eax, 0x2ccb81 ; neg eax ; mov dword ptr fs:[rcx], eax ; or rax, 0xffffffffffffffff ; ret
+0x00000000000f72cb : or eax, 0x2ccba8 ; neg eax ; mov dword ptr fs:[rcx], eax ; or rax, 0xffffffffffffffff ; ret
+0x00000000000f726b : or eax, 0x2ccc08 ; neg eax ; mov dword ptr fs:[rcx], eax ; or rax, 0xffffffffffffffff ; ret
+0x00000000000f72f3 : or ebx, 0xd8f7002c ; mov dword ptr fs:[rcx], eax ; or rax, 0xffffffffffffffff ; ret
+0x00000000000f7253 : ret 0x97e8
+0x00000000000f7222 : sbb dword ptr [rip + 0x7500002d], esp ; adc byte ptr [rax], bh ; syscall ; cmp rax, -0xfff ; jae 0xf727f ; ret
+0x00000000000f7224 : sub eax, 0x10750000 ; mov eax, 0 ; syscall ; cmp rax, -0xfff ; jae 0xf727d ; ret
+0x00000000000f7284 : sub eax, 0x10750000 ; mov eax, 1 ; syscall ; cmp rax, -0xfff ; jae 0xf72dd ; ret
+0x00000000000f722e : syscall ; cmp rax, -0xfff ; jae 0xf7273 ; ret
+0x00000000000f728e : syscall ; cmp rax, -0xfff ; jae 0xf72d3 ; ret
+0x00000000000f72e5 : syscall ; cmp rax, -0xfff ; jae 0xf72fa ; ret
+0x00000000000f72cc : test al, 0xcb ; sub al, 0 ; neg eax ; mov dword ptr fs:[rcx], eax ; or rax, 0xffffffffffffffff ; ret
+
+Unique gadgets found: 80

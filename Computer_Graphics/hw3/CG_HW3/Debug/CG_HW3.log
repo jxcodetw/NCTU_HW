@@ -1,0 +1,5 @@
+﻿  main.cpp
+e:\hw\computer_graphics\cg_hw3\cg_hw3\cg_hw3\main.cpp(19): warning C4067: 未預期的語彙基元，接著前置處理器指示詞 - 必須是新行
+e:\hw\computer_graphics\cg_hw3\cg_hw3\cg_hw3\main.cpp(177): warning C4018: '<': signed/unsigned 不相符
+  CG_HW3.vcxproj -> E:\hw\computer_graphics\CG_HW3\CG_HW3\Debug\CG_HW3.exe
+  CG_HW3.vcxproj -> E:\hw\computer_graphics\CG_HW3\CG_HW3\Debug\CG_HW3.pdb (Partial PDB)

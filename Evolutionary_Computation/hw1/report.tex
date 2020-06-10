@@ -1,0 +1,121 @@
+\documentclass[A4]{article}
+
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage[toc,page]{appendix}
+\usepackage{url}
+
+\title{Evolutionary Computation Homework \#1 Report}
+
+\author{Chien-Hsun, Lai}
+
+\date{\today}
+% ---- 1. Section title -> Section 1: Section title
+\makeatletter
+% we use \prefix@<level> only if it is defined
+\renewcommand{\@seccntformat}[1]{%
+  \ifcsname prefix@#1\endcsname
+    \csname prefix@#1\endcsname
+  \else
+    \csname the#1\endcsname\quad
+  \fi}
+% define \prefix@section
+\newcommand\prefix@section{Problem \thesection:}
+\makeatother
+% -----
+\begin{document}
+\maketitle
+
+\section{}
+\label{sec:p1}
+
+\begin{enumerate}[label=(\alph*)]
+\item From a $ 8*8 $ board choose $ 8 $ locations: $ C^{64}_{8} = 4,426,165,368 $.
+\item We can use 8 tuples $ \{(x_1, y_1), ... , (x_8, y_8)\} $ to encode the location of each queen.
+\item $ 1 \leq x_i, y_i \leq 8 $ There are $ (8*8)^8 = 281,474,976,710,656 $ possible states.
+\item Each location of the queen is mapped to a tuple $(x_i, y_i)$.
+\end{enumerate}
+
+\section{}
+\label{sec:p2}
+
+There are $ 1 / 0.001 = 1000 $ intervals in $ [0, 1] $.
+We'll need at least 10 bit (with $ 2^{10} = 1024 $ intervals) to achieve that precision.
+
+\section{}
+\label{sec:p3}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.8\textwidth]{logs/p3_fig.png}
+\caption{\label{fig:p3} Result with default parameters.}
+\end{figure}
+
+\section{}
+\label{sec:p4}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.8\textwidth]{logs/p4_fig.png}
+\caption{\label{fig:p4} Add 1000 to fitness function (fitness is subtracted 1000 in the fig)}
+\end{figure}
+
+\section{}
+\label{sec:p5}
+
+The original fitnesses range from $[0, 50]$.
+After you add 1000 to them, the probability being chosen approaches uniform distribution.
+For example, assume there are two individuals with fitness 10 and 50 respectively.
+Before adding 1000, the probability the two being chosen are $ 10 / 60 \approx 16.66\% $ and $ 50/60 \approx 83.33\% $.
+After adding 1000, it becomes $ 1010/2060 \approx 49\% $ and $ 1050/2060 \approx 51\% $.
+So the experiment in Problem 4 won't imporve the fitness over generation.
+Those individuals are just mixing there gene randomly.
+\\
+The figure in Problem 4 shows that the best fitness dropped over generations.
+Which indicate that the fitness of all individuals are averaging with each other.
+\section{}
+\label{sec:p6}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.8\textwidth]{logs/p6_fig.png}
+\caption{\label{fig:p6} Repeat Problem 3 with tournament selection.}
+\end{figure}
+
+\section{}
+\label{sec:p7}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.8\textwidth]{logs/p7_fig.png}
+\caption{\label{fig:p7} Repeat Problem 4 with tournament selection.}
+\end{figure}
+
+\section{}
+\label{sec:p8}
+
+Despite the fitness function was different. Both experiments still converged and found the best solution.
+After you add $ 1000 $ to the fitness function.
+It doesn't affect the comparasion of two individuals.
+The rank of each individuals doesn't change.
+One with higher fitness still has a higher fitness after adding $ 1000 $.
+So experiments in both problem shows very similar results.
+
+\section{}
+\label{sec:p9}
+From Problem 5 and Problem 8, we can observ that:
+\begin{enumerate}
+\item Roulette selection depends heavily on the proportionaly difference of each individuals.
+\item Tournament selection depends on the rank of each individuals.
+\end{enumerate}
+
+\begin{appendices}
+\chapter{Source code for experiments}\\
+\url{https://github.com/jxcodetw/NCTU_GA/tree/master/hw1}
+\end{appendices}
+
+\end{document}

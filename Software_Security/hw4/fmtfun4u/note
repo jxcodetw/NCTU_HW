@@ -1,0 +1,15 @@
+%8$p leak code base <__libc_csu_init>
+%11$p stack <read_input>'s return addr + 0x100
+%11$n to control stack
+%7$p main's i
+
+leak stack addr
+change i to higer value
+leak global variable addr
+compute got
+leak got
+write return addr to one gadget
+
+tmp
+0x5622ef4ebfc0
+0x5622ef2eba80

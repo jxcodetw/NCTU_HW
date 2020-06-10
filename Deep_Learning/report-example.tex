@@ -1,0 +1,59 @@
+\documentclass[A4]{article}
+
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage[toc,page]{appendix}
+\usepackage{url}
+
+\usepackage{geometry}
+\geometry{
+a4paper,
+left=20mm,
+top=20mm,
+}
+
+
+
+\title{Deep Learning Lab0 Report}
+
+\author{Chien-Hsun, Lai}
+
+\date{\today}
+
+\makeatletter
+% we use \prefix@<level> only if it is defined
+\renewcommand{\@seccntformat}[1]{%
+  \ifcsname prefix@#1\endcsname
+    \csname prefix@#1\endcsname
+  \else
+    \csname the#1\endcsname\quad
+  \fi}
+% define \prefix@section
+\newcommand\prefix@section{\thesection. }
+\makeatother
+
+\renewcommand{\thesubsection}{\alph{subsection}.}
+\begin{document}
+\maketitle
+
+\section{Introduction}
+\section{Experiment setups}
+%
+%\begin{figure}[H]
+%\centering
+%\includegraphics[width=0.8\textwidth]{sigmoid.png}
+%\caption{\label{fig:sigmoid} Sigmoid function (from Wiki).}
+%\end{figure}
+
+\section{Results}
+\section{Discussion}
+\begin{appendices}
+\chapter{Source code for experiments}\\
+\url{https://github.com/jxcodetw/NCTU_DeepLearning/tree/master/lab1}
+\end{appendices}
+
+\end{document}

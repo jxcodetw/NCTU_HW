@@ -1,0 +1,8 @@
+ARAP_deformer.sdf
+ARAP_deformer.opensdf
+.vs
+Debug
+Release
+ARAP_deformer/Debug
+ARAP_deformer/Release
+ipch
