@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>As-Rigid-As-Possible Surface Modeling Web Demo</title>
+	<style>
+		html, body {
+			margin: 0;
+			height: 100%;
+		}
+		#c {
+			width: 100%;
+			height: 100%;
+			display: block;
+		}
+		#info {
+			position: absolute;
+			top: 2%;
+			right: 5%;
+			color: white;
+			text-align: right;
+		}
+	</style>
+</head>
+<body>
+	<div id="info">
+		<div>
+			Usage: 1. uncheck camera movement 2. select control points 3. press "2"
+		</div>
+		<label for="enable_cam">Camera Movement</label>
+		<input id="enable_cam" type="checkbox" checked>
+	</div>
+	<canvas id="c"></canvas>
+	<script src="https://unpkg.com/svd-js" type="application/javascript"></script>
+	<script src="cuthill-mckee.js"></script>
+	<script src="cholesky-solve.js"></script>
+	<script type="module" src="main.js"></script>
+	<script src="stats.min.js"></script>
+</body>
+</html>
