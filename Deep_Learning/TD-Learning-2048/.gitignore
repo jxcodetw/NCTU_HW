@@ -1,0 +1,10 @@
+.vscode
+*.o
+main
+main_exp
+ai.out.js
+weights.txt
+ai.w
+ai.ntuple
+2048.log
+weights.bin
